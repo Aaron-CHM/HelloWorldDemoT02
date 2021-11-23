@@ -1,4 +1,4 @@
-name: CI for Remote HelloWOrld #YML filename
+name: CI for Remote HelloWorld #YML filename
 
 on: #trigger
   push:
@@ -28,10 +28,7 @@ jobs:
       with:
         repository: lowkh2/DevOpsQARepo
         uses: actions/checkout@v2
-        with:
-          repository: lowkh2/DevOpsQARepo
-          path: tests
-          token: ${{ secrets.QA_REMOTE }}
+        token: ${{ secrets.QA_REMOTE }}
           
     - name: Begin Pytest #run test
       run: |
