@@ -33,5 +33,5 @@ jobs:
     - name: Begin Pytest #run test
       run: |
         ls
-        mv ./test/*.* ./
+        mv ./tests/*.* ./
         pytest --cov
