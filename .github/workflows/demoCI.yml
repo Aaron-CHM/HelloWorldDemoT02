@@ -41,7 +41,7 @@ jobs:
       run: |
         ls
         mv ./tests/*.* ./
-        pytest --cov
+        pytest --cov -v --junitxml=report.xml
         
     - if: ${{failure()}}       
       name: Create Issues
